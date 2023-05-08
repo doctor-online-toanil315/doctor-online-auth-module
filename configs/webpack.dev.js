@@ -7,7 +7,7 @@ const devConfigs = {
   mode: "development",
   entry: "./src/main.tsx",
   output: {
-    publicPath: "http://localhost:5173/",
+    publicPath: "https://doctor-online-auth-module.vercel.app/",
   },
   devServer: {
     port: 5173,
