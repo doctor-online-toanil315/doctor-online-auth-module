@@ -3,9 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "webpack serve --config configs/webpack.dev.js"
+    "start": "webpack serve --config configs/webpack.dev.js",
+    "build": "webpack --config configs/webpack.dev.js"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.0.3",
+    "@fullcalendar/daygrid": "^6.0.3",
+    "@fullcalendar/react": "^6.0.4",
     "@hookform/resolvers": "^2.9.7",
     "@reduxjs/toolkit": "^1.8.4",
     "@toast-ui/editor-plugin-color-syntax": "^3.1.0",
@@ -13,8 +17,8 @@
     "antd": "^4.22.4",
     "core-js": "^3.6.5",
     "dayjs": "^1.11.6",
-    "doctor-online-common": "^0.0.3",
-    "doctor-online-components": "^0.0.2",
+    "doctor-online-common": "^0.0.8",
+    "doctor-online-components": "^0.1.1",
     "env-cmd": "^10.1.0",
     "file-saver": "^2.0.5",
     "i18next": "^21.9.0",

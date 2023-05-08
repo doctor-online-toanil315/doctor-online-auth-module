@@ -3,8 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
-import { Button, Checkbox, Input, LogoPrimary } from "doctor-online-components";
-import { AuthResponse } from "../../types/Responses";
+import { Button, Checkbox, Input } from "doctor-online-components";
 import { saveRemember } from "doctor-online-common";
 import { useCommonDispatch } from "doctor-online-common";
 
@@ -21,6 +20,7 @@ import { useEffect, useState } from "react";
 import { useLoginMutation } from "../../services/Auth";
 import { Link } from "react-router-dom";
 import { LoginRequest } from "src/lib/types/AuthTypes";
+import LogoPrimary from "../../assets/logo.png";
 
 const Login = () => {
   const dispatch = useCommonDispatch();
@@ -69,7 +69,7 @@ const Login = () => {
         if (location.search) {
           window.location.replace(location.search.replace("?from=", ""));
         } else {
-          window.location.replace("http://127.0.0.1:8000/overview/me");
+          window.location.replace("http://127.0.0.1:8000/user-home");
         }
       })
       .catch((e) => {
@@ -114,7 +114,7 @@ const Login = () => {
       <FormProvider {...form}>
         <StyledForm onSubmit={form.handleSubmit(onSubmit)}>
           <div className="logo">
-            <LogoPrimary />
+            <img src={LogoPrimary} alt="logo" />
           </div>
           <Input
             label={t("login.username")}

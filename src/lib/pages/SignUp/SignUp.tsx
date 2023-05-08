@@ -3,18 +3,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
-import {
-  Button,
-  Input,
-  LogoPrimary,
-  openNotification,
-} from "doctor-online-components";
+import { Button, Input, openNotification } from "doctor-online-components";
 import { Contact, ContainerLogin, StyledButton, StyledForm } from "./styles";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSignUpMutation } from "../../services/Auth";
 import { SignUpRequest } from "src/lib/types/AuthTypes";
 import { Col, Row } from "antd";
+import LogoPrimary from "../../assets/logo.png";
 
 const SignUp = () => {
   const { t } = useTranslation();
@@ -75,7 +71,7 @@ const SignUp = () => {
       <FormProvider {...form}>
         <StyledForm onSubmit={form.handleSubmit(onSubmit)}>
           <div className="logo">
-            <LogoPrimary />
+            <img src={LogoPrimary} alt="logo" />
           </div>
           <Row gutter={[20, 20]}>
             <Col span={12}>
